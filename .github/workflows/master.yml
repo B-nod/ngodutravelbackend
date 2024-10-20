@@ -11,7 +11,11 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: https://backend.binodtamang.com/
+        server: www.backend.binodtamang.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
+<<<<<<< HEAD
         server-dir: /ngodutravel/
+=======
+        server-dir: /ngodutravel/tourbackend/
+>>>>>>> ec097e36124cee01b34ec6c273929b7b282d968a
