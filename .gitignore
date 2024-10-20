@@ -1,0 +1,4 @@
+#Ignore vitrual environment
+myvenv
+myvenv/
+/myvenv

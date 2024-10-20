@@ -1,0 +1,58 @@
+/* custom.css */
+.jazzmin-login-page {
+    background-color: #566573; /* From purple to blue */
+}
+
+
+
+.login-logo h1 picture img {
+    max-width: 150px;  /* Adjust the size */
+    height: auto;      /* Keep the aspect ratio */
+    margin-bottom: 20px; /* Add some spacing below */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    
+    /* Add a colorful shadow using a gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 0 15px rgba(255, 0, 255, 0.3), /* Pink shadow */
+                0 0 30px rgba(0, 0, 255, 0.3);  /* Blue shadow */
+    
+    /* Transition for smooth hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-logo h1 picture img:hover {
+    /* Move slightly upwards on hover */
+    transform: translateY(-10px);
+    
+    /* Increase and enhance the colorful shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+                0 0 25px rgba(255, 0, 255, 0.5), /* Stronger pink shadow */
+                0 0 50px rgba(0, 0, 255, 0.5);  /* Stronger blue shadow */
+}
+
+.login-box-msg{
+    font-weight: bold;
+    font-size:25px
+}
+#jazzy-logo span{
+  color:white;
+}
+.main-sidebar{
+    background: #001f3f;
+}
+.info a{
+    color:white !important;
+}
+.nav-header, .nav-link {
+    color:white !important;
+}
+.main-footer{
+    background: #001f3f;
+    color:white;
+}
+.dropdown-item{
+    color:black !important;
+}
