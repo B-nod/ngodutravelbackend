@@ -14,8 +14,5 @@ jobs:
         server: www.backend.binodtamang.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-<<<<<<< HEAD
         server-dir: /ngodutravel/
-=======
-        server-dir: /ngodutravel/tourbackend/
->>>>>>> ec097e36124cee01b34ec6c273929b7b282d968a
+
