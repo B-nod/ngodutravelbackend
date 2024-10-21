@@ -17,16 +17,16 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run:
+        run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements.txt  # Corrected this line
       
       - name: Run tests
         run: python manage.py test
 
   deploy:
-    runs-on: ubnuntu-latest
+    runs-on: ubuntu-latest  # Fixed typo (ubnuntu to ubuntu)
     needs: [ build_and_test ]
-    steps : 
+    steps: 
       - name: echo hello world
         run: echo 'hello world'
