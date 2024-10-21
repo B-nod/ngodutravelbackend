@@ -1,18 +1,32 @@
-on: push
-name: 🚀 Deploy website on push
+name: Build and Deploy
+
+on: 
+  push:
+    branches: [ master ]
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: www.binodtamang.com
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: /ngodutravel/
+      - name: Checkout code 
+        uses: actions/checkout@v3
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run:
+          python -m pip install --upgrade pip
+          pip install requirements.txt
+      
+      - name: Run tests
+        run: python manage.py test
+
+  deploy:
+    runs-on: ubnuntu-latest
+    needs: [ build_and_test ]
+    steps : 
+      - name: echo hello world
+        run: echo 'hello world'
